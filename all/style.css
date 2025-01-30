@@ -1,0 +1,57 @@
+body {
+    background-color: #f7e7e7; /* Soft romantic background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.rose-container {
+    position: relative;
+}
+
+.rose {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -100px;
+    animation: growRose 5s ease-in-out forwards;
+}
+
+.leaf {
+    width: 50px;
+    height: 30px;
+    background-color: red;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 50px;
+    left: 25px;
+    transform: rotate(-45deg);
+    animation: growLeaf 5s ease-in-out forwards;
+}
+
+@keyframes growRose {
+    0% {
+        bottom: -100px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 50px;
+        opacity: 1;
+    }
+}
+
+@keyframes growLeaf {
+    0% {
+        bottom: 50px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 50px;
+        opacity: 1;
+    }
+}
